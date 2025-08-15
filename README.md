@@ -14,5 +14,4 @@ It supports text input, image uploads, and returns AI-generated responses in rea
 
 ---
 
-## **Project Structure**
 
