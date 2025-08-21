@@ -1,5 +1,5 @@
 // const Api_url = "/api/chat"; // points to your backend route
-const Api_url = "http://localhost:3000/api/chat";
+const Api_url = "https://ai-chat-bot-backend-phi.vercel.app/";
 
 // DOM elements
 const chatContainer = document.querySelector(".chat-container");
