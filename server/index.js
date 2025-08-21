@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
   res.json({ message: "AI ChatBot Server is running!", status: "OK" });
 });
 
-app.post("/api/chat", async (req, res) => {
+app.post("/", async (req, res) => {
   try {
     const userMessage = req.body.message;
     const fileData = req.body.file;
