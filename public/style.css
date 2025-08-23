@@ -7,8 +7,7 @@
 
 body{
     width: 100%;
-    height: 100vh;
-    /* background-color: aqua; */
+    height: 100%;
 }
 
 body, html {
@@ -18,17 +17,17 @@ body, html {
 
 .chat-container {
     width: 100%;
-    height: 80vh;          /* fixed viewport relative height */
+    height: 80vh;         
     background-color: rgb(10, 53, 93);
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     font-size: 20px;
-    overflow-y: auto;       /* only vertical scrolling */
-    overflow-x: hidden;     /* hide horizontal scroll */
-    scroll-behavior: smooth; /* smooth scrolling */
-    padding-bottom: 100px;  /* ensure last message isn't hidden behind input */
+    overflow-y: auto;      
+    overflow-x: hidden;     
+    scroll-behavior: smooth; 
+    padding-bottom: 100px;  
 }
 
 .user-chat-box{
@@ -167,14 +166,12 @@ body, html {
     justify-content: center;
 }
 
-/* Responsive Images */
 img {
     max-width: 100%;
     height: auto;
     object-fit: contain;
 }
 
-/* Uploaded image styling in chat */
 .uploaded-image {
     max-width: 100%;
     height: auto;
@@ -184,7 +181,6 @@ img {
     display: block;
 }
 
-/* User chat area with image */
 .user-chat-area:has(.uploaded-image) {
     display: flex;
     flex-direction: column;
@@ -197,7 +193,6 @@ img {
     overflow-wrap: break-word;
 }
 
-/* Tablet Breakpoint */
 @media screen and (max-width: 1024px) {
     .chat-container {
         padding: 15px;
@@ -239,7 +234,6 @@ img {
     }
 }
 
-/* Small Tablet Breakpoint */
 @media screen and (max-width: 768px) {
     .chat-container {
         padding: 12px;
@@ -293,7 +287,6 @@ img {
     }
 }
 
-/* Mobile Breakpoint */
 @media screen and (max-width: 480px) {
     .chat-container {
         padding: 10px;
@@ -362,7 +355,6 @@ img {
     }
 }
 
-/* Extra Small Mobile */
 @media screen and (max-width: 360px) {
     .chat-container {
         padding: 8px;
@@ -418,7 +410,6 @@ img {
     }
 }
 
-/* Landscape Mobile */
 @media screen and (max-height: 500px) and (orientation: landscape) {
     .chat-container {
         height: 70vh;
@@ -440,7 +431,6 @@ img {
     }
 }
 
-/* Ensure proper spacing for dynamic content */
 .chat-container::after {
     content: '';
     display: block;
@@ -448,7 +438,6 @@ img {
     min-height: 20px;
 }
 
-/* Improve button touch targets on mobile */
 @media (hover: none) and (pointer: coarse) {
     .prompt-area button {
         min-width: 44px;
