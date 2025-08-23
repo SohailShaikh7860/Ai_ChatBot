@@ -17,7 +17,7 @@ body, html {
 
 .chat-container {
     width: 100%;
-    height: 80vh;         
+    height: 100%;         
     background-color: rgb(10, 53, 93);
     padding: 20px;
     display: flex;
@@ -378,6 +378,7 @@ img {
         padding: 10px;
         font-size: 13px;
         border-radius: 20px 0px 20px 20px;
+        margin-left: 17px;
     }
     
     .ai-chat-area {
@@ -405,8 +406,9 @@ img {
     
     #userImage,
     #aiImage {
-        width: 32px;
-        height: 32px;
+        width: 18px;
+        height: 25px;
+        border-radius: 5px;
     }
 }
 
