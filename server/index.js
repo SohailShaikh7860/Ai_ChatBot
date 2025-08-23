@@ -6,16 +6,16 @@ import cors from "cors";
 dotenv.config();
 const app = express();
 
-app.use(cors()); // ✅ Allow requests from other origins
-app.use(express.json({ limit: '50mb' })); // Increase limit for large image uploads
-app.use(express.urlencoded({ limit: '50mb', extended: true })); // Handle URL-encoded data
+app.use(cors());
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
-// Test endpoint
+
 app.get("/", (req, res) => {
   res.json({ message: "AI ChatBot Server is running!", status: "OK" });
 });
 
-app.post("/", async (req, res) => {
+app.post("/api/chat", async (req, res) => {
   try {
     const userMessage = req.body.message;
     const fileData = req.body.file;
@@ -27,12 +27,11 @@ app.post("/", async (req, res) => {
       return res.status(400).json({ error: "No message or file provided" });
     }
 
-    // Validate file size (base64 data can be large)
     if (fileData && fileData.data) {
       const fileSizeInBytes = Math.ceil((fileData.data.length * 3) / 4);
       const fileSizeInMB = fileSizeInBytes / (1024 * 1024);
       
-      if (fileSizeInMB > 20) { // Limit to 20MB
+      if (fileSizeInMB > 20) {
         return res.status(400).json({ 
           error: "File too large. Maximum size is 20MB.",
           fileSize: `${fileSizeInMB.toFixed(2)}MB`
