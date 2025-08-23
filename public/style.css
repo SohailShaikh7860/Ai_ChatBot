@@ -355,7 +355,7 @@ img {
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (min-width: 360px) {
     .chat-container {
         padding: 8px;
         gap: 8px;
@@ -365,7 +365,7 @@ img {
     
     .user-chat-box,
     .ai-chat-box {
-        width: 95%;
+        width: 92%;
     }
     
     .user-chat-box {
@@ -408,7 +408,7 @@ img {
     #aiImage {
         width: 18px;
         height: 25px;
-        border-radius: 5px;
+        border-radius: 10px;
     }
 }
 

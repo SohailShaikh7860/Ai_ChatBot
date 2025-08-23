@@ -1,4 +1,4 @@
-const Api_url = "http://localhost:3000/api/chat";
+const Api_url = "https://ai-chat-bot-backend-phi.vercel.app/";
 
 const chatContainer = document.querySelector(".chat-container");
 const promptInput = document.getElementById("prompt");
